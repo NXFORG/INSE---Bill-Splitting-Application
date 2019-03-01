@@ -4,3 +4,4 @@ Rules:
 2) Every time a commit is made, server-side testing required. If it doesn't work, 
 make a note of that so repository members know not to make a pull request.
 3) Repository manager needs to approve merges with the master branch.
+4) Regression testing so any changes you make don't negatively affect exisitng code.
