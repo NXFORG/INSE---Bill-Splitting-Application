@@ -1,11 +1,14 @@
 body{
-  background-color: grey;
-  color: white;
+  background-color: lightgrey;
+  color: grey;
   font-family: arial;
   margin: 0;
 }
 header{
   text-align: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 /* CSS for main container */
 main{
