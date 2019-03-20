@@ -35,9 +35,12 @@ main{
 .button:hover{
   background-color: lightgrey;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
 /* CSS for back button */
 #backButton{
-
   width: 5%;
   height: 5%;
   float: left;
