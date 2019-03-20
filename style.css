@@ -1,5 +1,6 @@
+
 body{
-  background-color: #21265e;
+  background-color: lightblue;
   background-size: cover;
   margin: 0;
 }
@@ -27,7 +28,7 @@ body{
   transition-property: color, background-color;
 }
 .jumbotron{
-  background-color: rgba(215, 212, 219,0.3);
+  background-color: rgba(215, 212, 219,0.7);
 }
 header{
   text-align: center;
