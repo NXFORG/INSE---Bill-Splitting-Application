@@ -1,4 +1,5 @@
 
+
 body{
   background-color: lightblue;
   background-size: cover;
@@ -90,4 +91,19 @@ main{
   .navbar-nav > li{
     font-size: 22px;
   }
+}
+
+
+/* CSS for bill split page */
+/* CSS not finished */
+#billContainer{
+  position: absolute;
+  background-color: grey; /*Colour for testing purposes */
+  width: 80%;
+  height: 70%;
+  margin-left: 10%;
+
+}
+#amountContainer{
+  background-color: lightgrey;  /*Colour for testing purposes */
 }
