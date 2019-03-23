@@ -5,6 +5,7 @@ body{
   background-size: cover;
   margin: 0;
 }
+/*CSS for using custom fonts*/
 @font-face {
 font-family: "lml";
 src: url("LemonMilklight.otf");
@@ -12,20 +13,22 @@ src: url("LemonMilklight.otf");
 
 @font-face {
 font-family: "code";
-src: url("code bold.otf");
+src: url("code.otf");
 }
 /*navbar css*/
 .navbar{
   padding: 0;
 }
+/*CSS for navbar item container*/
 .navbar-nav {
   margin:0 auto;
   text-align: center;
 }
+/*CSS for navbar items*/
 .navbar-nav > li {
-  display: inline-block;
   font-size: 22px;
 }
+/*CSS for hover effect on the navbar items*/
 .hvr-fade{
   display: inline-block;
   vertical-align: middle;
@@ -38,12 +41,15 @@ src: url("code bold.otf");
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
 }
+/*CSS for jumbotron containing header*/
 .jumbotron{
   background-color: rgba(215, 212, 219,0.7);
 }
+/*CSS for header containing title of the page*/
 header{
   text-align: center;
 }
+/*Css for page title*/
 header > h1{
   font-size: 400%;
   font-family: 'lml';
@@ -87,6 +93,7 @@ main{
   justify-content: center;
   align-items: center;
 }
+/*Button text */
 .button > p{
   font-family: 'code';
   font-weight: bold;
@@ -111,8 +118,11 @@ a:hover{
 }*/
 /* media queries to scale content on smaller devices*/
 @media all and (max-width: 700px) {
+  .button{
+    height: 12%;
+  }
   .button > p{
-    font-size: 100%;
+    font-size: 85%;
   }
 }
 
