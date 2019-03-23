@@ -31,3 +31,11 @@ create table transaction (
   vouchId int,
   constraint vouchId foreign key (vouchId) references vouchers(vouchId)
 );
+
+create table split_method (
+  splitId int not null primary key,
+  splitName varchar(20) not null
+);
+
+insert into split_method values (1,"evenly");
+insert into split_method values (2,"per_item");
