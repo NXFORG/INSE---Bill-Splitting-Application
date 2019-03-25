@@ -1,7 +1,16 @@
 'use strict';
 
-//Script for the bill split:
+//Script for contacts:
+let contactBtn = document.getElementById('addContact');
+contactBtn.addEventListener('click', addContactFunction);
 
+
+function addContactFunction(){
+  alert('hello');
+
+}
+
+//Script for the bill split:
 let amountInput = document.getElementById('amountInput');
 let confirmAmountBtn = document.getElementById('confirmAmountBtn');
 confirmAmountBtn.addEventListener('click', amountValidation);
@@ -16,7 +25,7 @@ function amountValidation(){
       alert('Error must enter a in range 1-5000.');
     } else {
       //Rounds to 2dp:
-       let finalValue = Math.round(amountInput.value * 100) / 100
+       let finalValue = Math.round(amountInput.value * 100) / 100;
     }
   }
 }
