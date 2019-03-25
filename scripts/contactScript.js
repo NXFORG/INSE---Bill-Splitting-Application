@@ -17,21 +17,29 @@ function submitContactFunction(){
   let contactPhone = document.getElementById('contactPhoneInput').value;
   let contactDescription = document.getElementById('contactDescriptionInput').value;
 
-  //Validation prevents too long names:
+  //Validation:
   if(contactName.length > 30){
     alert('Names cannot exceed 30 characters in length.');
-  }
-
-  //Phone Number Validation:
-  if(isNaN(contactPhone)){
+  } else if(isNaN(contactPhone)){
     alert('Phone number must be a series of numbers. (no spaces/letters/symbols)');
   } else if(contactPhone.length > 11){
       alert('Phone number cannot exceed 11 characters in length.');
+  } else if(contactDescription.length > 140){
+    alert('Contact Descriptions cannot exceed 140 characters in length.');
+  } else {
+
+    let newContact = document.createElement('div');
+    let contactTag = document.createElement('p');
+    contactTag.textContent = contactName;
+    newContact.className = 'contact';
+    newContact.appendChild(contactTag);
+    document.getElementById('contactsOverview').appendChild(newContact);
+    document.getElementById('contactsOverview').style.display = 'block';
+    document.getElementById('addContactContainer').style.display = 'none';
   }
 
-  //Validation prevents too long descriptions:
-  if(contactDescription.length > 140){
-    alert('Contact Descriptions cannot exceed 140 characters in length.');
-  }
+
+
+
 
 }
