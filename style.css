@@ -152,3 +152,22 @@ a:hover{
   width: 15%;
   float: right;
 }
+#contactsContainer{
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  background-color: lightgrey;
+  margin-left: 10%;
+  border-color: black;
+  border-style: solid;
+
+}
+.contact{
+  text-align: center;
+  border-color: black;
+  border-bottom-style: solid;
+
+}
+.contact:hover{
+  background-color: white;
+}
