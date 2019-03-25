@@ -146,3 +146,9 @@ a:hover{
 #amountContainer{
   background-color: lightgrey;  /*Colour for testing purposes */
 }
+/* CSS for group page */
+#addGroup{
+  background-color: red; /*Colour for testing purposes */
+  width: 15%;
+  float: right;
+}
