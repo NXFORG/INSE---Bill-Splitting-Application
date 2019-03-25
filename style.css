@@ -159,13 +159,14 @@ a:hover{
 }
 
 /* CSS for group page */
-
-#addGroup{
-  background-color: red; /*Colour for testing purposes */
+#addContact{
+  background-color: lightgrey; /*Colour for testing purposes */
   width: 15%;
   float: right;
+  margin-right: 15%;
+  border-color: black;
+  border-style: solid;
 }
-
 #contactsContainer{
   position: absolute;
   width: 50%;
@@ -174,7 +175,6 @@ a:hover{
   margin-left: 10%;
   border-color: black;
   border-style: solid;
-
 }
 .contact{
   text-align: center;
@@ -185,3 +185,12 @@ a:hover{
 .contact:hover{
   background-color: white;
 }
+#addContactContainer{
+  display: none; /* Hides content until button is pressed. */
+  margin-left: 5%;
+
+}
+#addContactContainer > h3 {
+  text-align: center;
+}
+
