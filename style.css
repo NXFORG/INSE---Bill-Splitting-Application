@@ -178,7 +178,7 @@ a:hover{
 #contactsContainer{
   position: absolute;
   width: 80%;
-  height: 60%;
+  height: auto;
   background-color: lightgrey;
   left: 10%;
   margin-left: auto;
