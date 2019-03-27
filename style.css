@@ -161,7 +161,7 @@ a:hover{
 /* CSS for group page */
 #addContact{
   background-color: lightgrey;
-  width: 15%;
+  width: 25%;
   float: left;
   margin-left: 15%;
   border-color: black;
@@ -169,11 +169,12 @@ a:hover{
 }
 #addGroup{
   background-color: lightgrey;
-  width: 15%;
+  width: 25%;
   float: right;
   margin-right: 15%;
   border-color: black;
   border-style: solid;
+
 }
 #contactsContainer{
   position: absolute;
@@ -202,8 +203,6 @@ a:hover{
 }
 .contact{
   text-align: center;
-  border-color: black;
-  border-bottom-style: solid;
 
 }
 .contact:hover{
