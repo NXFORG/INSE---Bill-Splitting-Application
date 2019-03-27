@@ -51,6 +51,17 @@ function addGroupFunction(){
   document.getElementById('addContactContainer').style.display = 'none';
 }
 
+let contactElements = document.getElementsByClassName('contact');
+for(let i = 0; i < contactElements.length;  i++){
+  contactElements[i].addEventListener('click', function contactElementsFunction(){
+    let groupTextArea = document.getElementById('groupMembersInput');
+    groupTextArea.textContent += contactElements[i].firstElementChild.textContent + ', ';
+  });
+}
+
+
+
+
 
 //Function for submitting a new group:
 function submitGroupFunction(){
