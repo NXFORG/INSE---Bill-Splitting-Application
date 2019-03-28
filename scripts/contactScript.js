@@ -1,7 +1,9 @@
 'use strict';
-
+//Boolean to determine button actions:
+let addGroupBtnCheck = new Boolean(false);
+ updateContactList();
 //Script for contacts:
-let contactBtn = document.getElementById('addContact');
+const contactBtn = document.getElementById('addContact');
 contactBtn.addEventListener('click', addContactFunction);
 
 function addContactFunction(){
@@ -9,7 +11,7 @@ function addContactFunction(){
   document.getElementById('addContactContainer').style.display = 'block';
 }
 
-let submitContactButton = document.getElementById('submitContactInformation');
+const submitContactButton = document.getElementById('submitContactInformation');
 submitContactButton.addEventListener('click', submitContactFunction);
 
 //Function for submitting a new contact:
@@ -36,44 +38,70 @@ function submitContactFunction(){
     document.getElementById('contactList').appendChild(newContact);
     document.getElementById('contactList').style.display = 'block';
     document.getElementById('addContactContainer').style.display = 'none';
+    updateContactList();
   }
 }
 
-let addGroupButton = document.getElementById('addGroup');
+const addGroupButton = document.getElementById('addGroup');
 addGroupButton.addEventListener('click', addGroupFunction)
-let submitGroupButton = document.getElementById('submitGroupInformation');
+const submitGroupButton = document.getElementById('submitGroupInformation');
 submitGroupButton.addEventListener('click', submitGroupFunction)
 
+//Function for add group button:
 function addGroupFunction(){
+  addGroupBtnCheck = true;
   document.getElementById('addGroupContainer').style.display = 'block';
   document.getElementById('groupList').style.display = 'none';
   document.getElementById('contactList').style.display = 'block';
   document.getElementById('addContactContainer').style.display = 'none';
 }
 
-let contactElements = document.getElementsByClassName('contact');
-for(let i = 0; i < contactElements.length;  i++){
-  contactElements[i].addEventListener('click', function contactElementsFunction(){
-    let groupTextArea = document.getElementById('groupMembersInput');
-    groupTextArea.textContent += contactElements[i].firstElementChild.textContent + ', ';
-  });
+function updateContactList(){
+    let contactElements = document.getElementsByClassName('contact');
+    for(let i = 0; i < contactElements.length;  i++){
+      if(i % 2){
+        contactElements[i].style.backgroundColor = 'gold';
+        //#7c7e82 (original colours)
+      } else {
+        contactElements[i].style.backgroundColor = 'cyan';
+        //#afb1b5 (original colours)
+      }
+}
+}
+
+//Function for adding contacts to a new group:
+function addContactGroup(){
+
 }
 
 
 
 
 
+//Function for returning to list of contacts after viewing info about a single contact.
+let displayBackBtn = document.getElementById('displayContactBackBtn');
+displayBackBtn.addEventListener('click', backToContactList)
+function backToContactList(){
+  document.getElementById('contactList').style.display = 'block';
+  document.getElementById('displayContact').style.display = 'none';
+}
+
+
 //Function for submitting a new group:
 function submitGroupFunction(){
-
+  addGroupBtnCheck = false;
 
   let groupName = document.getElementById('groupNameInput').value;
   let groupDescription = document.getElementById('groupDescriptionInput').value;
   let groupMembers = document.getElementById('groupMembersInput').value;
+  document.getElementById('addGroupContainer').style.display = 'none';
+  document.getElementById('groupList').style.display = 'block';
 
-  alert(groupName + groupDescription + groupMembers);
-
-
-
-
+  //Creates a new group element:
+  let newGroup = document.createElement('div');
+  let groupTag = document.createElement('p');
+  groupTag.textContent = groupName;
+  newGroup.className = 'group';
+  newGroup.appendChild(groupTag);
+  document.getElementById('groupList').appendChild(newGroup);
 }
