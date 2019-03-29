@@ -60,10 +60,10 @@ function updateContactList(){
     let contactElements = document.getElementsByClassName('contact');
     for(let i = 0; i < contactElements.length;  i++){
       if(i % 2){
-        contactElements[i].style.backgroundColor = 'gold';
+        contactElements[i].style.backgroundColor = 'lightgrey';
         //#7c7e82 (original colours)
       } else {
-        contactElements[i].style.backgroundColor = 'cyan';
+        contactElements[i].style.backgroundColor = 'white';
         //#afb1b5 (original colours)
       }
 }
