@@ -154,7 +154,6 @@ a:hover{
 
 /* CSS for group page */
 #addContact{
-<<<<<<< HEAD
   background-color: white;
   border-color: #c7d0dd;
   box-shadow: 5px 5px rgba(0,0,0,0.5);
@@ -164,31 +163,9 @@ a:hover{
   text-align: center;
   padding-top: 15px;
 
-||||||| merged common ancestors
-  background-color: lightgrey;
-  width: 25%;
-  float: left;
-  margin-left: 15%;
-  border-color: black;
-  border-style: solid;
-=======
-  background-color: rgba(53 ,57, 66);
-  width: 25%;
-  float: left;
-  margin-left: 15%;
-  border-color: black;
-  border-style: solid;
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
-<<<<<<< HEAD
 
-||||||| merged common ancestors
-=======
-#addContact > p{color: white;}
-#addContact:hover {background-color: lightgrey;}
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 #addGroup{
-<<<<<<< HEAD
   background-color: white;
   border-color: #c7d0dd;
   box-shadow: 5px 5px rgba(0,0,0,0.5);
@@ -198,24 +175,7 @@ a:hover{
   text-align: center;
   padding-top: 15px;
 
-||||||| merged common ancestors
-  background-color: lightgrey;
-  width: 25%;
-  float: right;
-  margin-right: 15%;
-  border-color: black;
-  border-style: solid;
-
-=======
-  background-color: rgba(53 ,57, 66);
-  width: 25%;
-  float: right;
-  margin-right: 15%;
-  border-color: black;
-  border-style: solid;
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
-<<<<<<< HEAD
 #addGroup:hover,#addContact:hover{
   background-color: #dee1e8;
 }
@@ -223,65 +183,30 @@ a:hover{
   box-shadow: inset 2px 2px;
 }
 
-||||||| merged common ancestors
-=======
-#addGroup > p{color: white;}
-#addGroup:hover {background-color: lightgrey;}
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 #contactsContainer{
-  background-color: rgba(215, 212, 219);
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: auto;
-<<<<<<< HEAD
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
   left: 10%;
-||||||| merged common ancestors
-  background-color: lightgrey;
-  left: 10%;
-=======
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
   margin-left: auto;
   margin-bottom: 20px;
   text-align: center;
-<<<<<<< HEAD
   padding: 20px;
-||||||| merged common ancestors
-=======
-  font-family: 'lml';
-  color: #fff;
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
 #contactsOverview{
   font-family: 'lml';
   width: 50%;
   height: 100%;
   float: left;
-<<<<<<< HEAD
-||||||| merged common ancestors
-  background-color: lightgrey;
-=======
-  background-color: rgba(215, 212, 219);
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
 #groupsOverview{
   font-family: 'lml';
   width: 50%;
   height: 100%;
   float: right;
-<<<<<<< HEAD
-||||||| merged common ancestors
-  border-left-color: black;
-  border-left-style: solid;
-  background-color: lightgrey;
-=======
-  border-left-color: black;
-  border-left-style: solid;
-  background-color: rgba(215, 212, 219);
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
-<<<<<<< HEAD
 #contactsOverview > h3{
   margin-bottom: 20px;
   text-decoration: underline;
@@ -296,48 +221,18 @@ a:hover{
   margin-right: auto;
   padding-top: 20px;
   padding-bottom: 5px;
-||||||| merged common ancestors
-.contact{
-  text-align: center;
-
-=======
-.contact{
-  text-align: center;
-  height: 100%;
-  margin-bottom: -17px;
-
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
 .contact:hover.group:hover{
   background-color: white;
 }
 #addContactContainer{
   display: none; /* Hides content until button is pressed. */
-<<<<<<< HEAD
-||||||| merged common ancestors
-  margin-left: 5%;
-
-=======
-  margin-left: 5%;
-  background-color: rgba(215, 212, 219);
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
 #addContactContainer > h3 {
   text-align: center;
 }
 #addGroupContainer{
   display: none; /* Hides content until button is pressed. */
-<<<<<<< HEAD
-||||||| merged common ancestors
-  margin-right: 5%;
-=======
-  margin-right: 5%;
-  background-color: rgba(215, 212, 219);
-}
-#displayContact{
-  display: none;
-  background-color: rgba(215, 212, 219);
->>>>>>> c6d93455b3ff24e5e62d71fb55a54ea5c4715e92
 }
 input{
   width: 70%;
@@ -410,4 +305,3 @@ textarea{
     font-size: 22px;
   }
 }
-
