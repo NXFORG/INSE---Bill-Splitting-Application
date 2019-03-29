@@ -16,6 +16,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img class="logo" src="images/logo.png" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,15 +34,18 @@
 
     <header class="jumbotron jumbotron-fluid">
        <h1> Contacts </h1>
-       <div id='addContainer'>
-         <div id="addGroup">
-           <p> Add Group </p>
-         </div>
-         <div id="addContact">
-           <p> Add Contact </p>
-         </div>
-       </div>
     </header>
+    <div id="buttonsContainer">
+     <div id='addContainer'>
+     <div id="addContact">
+      <p> Add Contact </p>
+     </div>
+     <div id="addGroup">
+       <p> Add Group </p>
+     </div>
+    </div>
+  </div>
+
 
     <div id='contactsContainer'>  <!-- Main content container (contains both contacts/groups.)-->
       <div id='contactsOverview'>
@@ -76,7 +80,7 @@
           <p> New Group Description </p>
             <input id='groupDescriptionInput' type='text'/>
           <p> New Group Members </p>
-            <textarea rows='5' cols='50' id='groupMembersInput' type='text'></textarea><br>
+            <textarea rows='5' cols='45' id='groupMembersInput' type='text'></textarea><br>
             <button id='submitGroupInformation'> Submit </button>
         </div>
 
