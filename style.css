@@ -1,8 +1,7 @@
 
 
 body{
-  background-color: lightblue;;
-
+  background-color: lightblue;
   margin: 0;
 }
 /*CSS for using custom fonts*/
@@ -146,7 +145,6 @@ a:hover{
   width: 80%;
   height: 70%;
   margin-left: 10%;
-
 }
 #amountContainer{
   background-color: lightgrey;  /*Colour for testing purposes */
@@ -162,7 +160,6 @@ a:hover{
   margin-right: auto;
   text-align: center;
   padding-top: 15px;
-
 }
 
 #addGroup{
@@ -174,7 +171,6 @@ a:hover{
   margin-right: auto;
   text-align: center;
   padding-top: 15px;
-
 }
 #addGroup:hover,#addContact:hover{
   background-color: #dee1e8;
@@ -230,6 +226,7 @@ a:hover{
 }
 #addContactContainer > h3 {
   text-align: center;
+  
 }
 #addGroupContainer{
   display: none; /* Hides content until button is pressed. */
