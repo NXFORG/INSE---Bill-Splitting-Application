@@ -47,7 +47,7 @@
   </div>
 
 
-    <div id='contactsContainer'>  <!-- Main content container (contains both contacts/groups.)-->
+       <div id='contactsContainer'>  <!-- Main content container (contains both contacts/groups.)-->
       <div id='contactsOverview'>
         <h3> Contacts </h3>
         <div id='addContactContainer'> <!-- Container initially hidden. -->
@@ -59,6 +59,7 @@
             <input id='contactDescriptionInput' type='text'/><br>
           <button id='submitContactInformation'> Submit </button>
         </div>
+
         <div id='contactList'>
           <div class='contact'>
             <p> DUMMY CONTACT </p>
@@ -67,8 +68,16 @@
             <p> DUMMY CONTACT2 </p>
           </div>
         </div>
-      </div>
 
+        <div id='displayContact'>
+          <p id='displayContactName'>Contact Name: </p>
+          <p id='displayContactPhone'>Contact Phone: </p>
+          <p id='displayContactDescription'>Contact Description: </p>
+          <button id='deleteContactBtn'> Delete Contact </p>
+          <button id='displayContactBackBtn'> Back </p>
+        </div>
+
+      </div>
 
 
       <div id='groupsOverview'>
