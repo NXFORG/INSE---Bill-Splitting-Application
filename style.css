@@ -306,3 +306,16 @@ textarea{
     font-size: 22px;
   }
 }
+
+/* DEBT PAGE CSS */
+#overallContainer{
+  margin: auto;
+  width: 90%;
+  height: 70%;
+  text-align: center;
+}
+.individualDebtElement{
+  background-color: rgba(255,255,255,0.5);
+  border-style: solid;
+  border-color: black;
+}
