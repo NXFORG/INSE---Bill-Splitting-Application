@@ -29,3 +29,11 @@ function amountValidation(){
     }
   }
 }
+
+function dutchSplit(){
+
+}
+
+function standardSplit(){
+  
+}
