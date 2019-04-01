@@ -2,7 +2,6 @@
 
 body{
   background-color: lightblue;
-  background-size: cover;
   margin: 0;
 }
 /*CSS for using custom fonts*/
@@ -41,7 +40,7 @@ src: url("code.otf");
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
 }
-#logo{
+.logo{
   position: absolute;
   max-height: 70px;
 }
@@ -110,6 +109,10 @@ a:hover{
 .button:hover{
   background-color: #dee1e8;
 }
+.button:active{
+  background-color: #dee1e8;
+  box-shadow: inset 2px 2px;
+}
 /* CSS for back button */
 /*#backButton{
   position: absolute;
@@ -120,68 +123,246 @@ a:hover{
   height: 40px;
   float: left;
 }*/
-/* media queries to scale content on smaller devices*/
-@media all and (max-width: 700px) {
 
+/* CSS for bill split page */
+/* CSS not finished */
+
+#addContainer{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+}
+#billContainer{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#amountContainer > h3{
+    text-align: center;
+    font-family: 'code';
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#btnContainer{
+  display: flex;
+  justify-content: center;
+}
+#confirmAmountBtn{
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: white;
+  width: 80%;
+  padding: 10px;
+}
+#confirmAmountBtn:hover{
+  background-color: #60bcea;
+  border-color: white;
+  color: white;
+}
+/* CSS for group page */
+#addContact{
+  background-color: white;
+  border-color: #c7d0dd;
+  box-shadow: 5px 5px rgba(0,0,0,0.5);
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#addGroup{
+  background-color: white;
+  border-color: #c7d0dd;
+  box-shadow: 5px 5px rgba(0,0,0,0.5);
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+#addGroup:hover,#addContact:hover{
+  background-color: #dee1e8;
+}
+#addGroup:active,#addContact:active{
+  box-shadow: inset 2px 2px;
+}
+
+#contactsContainer{
+  position: absolute;
+  width: 80%;
+  height: auto;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  left: 10%;
+  margin-left: auto;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+}
+#contactsOverview{
+  font-family: 'lml';
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+#groupsOverview{
+  font-family: 'lml';
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+#contactsOverview > h3{
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+#groupsOverview > h3{
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+.contact,.group{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+.contact:hover,.group:hover{
+  background-color: white;
+}
+#addContactContainer{
+  display: none; /* Hides content until button is pressed. */
+}
+#addContactContainer > h3 {
+  text-align: center;
+
+}
+#addGroupContainer{
+  display: none; /* Hides content until button is pressed. */
+}
+#displayContact{
+  display: none;
+  background-color: rgba(215, 212, 219);
+}
+#contactNameInput,#contactPhoneInput,#contactDescriptionInput{
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+#groupNameInput,#groupMembersInput,#groupDescriptionInput{
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+textarea{
+  width: 70%;
+}
+#amountInput{
+  display: flex;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#submitGroupInformation,#submitContactInformation{
+  padding: 10px;
+  margin-top: 5%;
+  width: 70%;
+}
+/* media queries to scale content on smaller devices*/
+#splitSelection,#groupSelection{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+label{
+  margin-left: 5px;
+  font-family: 'lml';
+}
+@media all and (max-width: 1200px) {
+  #billContainer{
+    width: 50%;
+  }
+}
+@media all and (max-width: 700px) {
   .button{
     height: 12%;
+    border: 2px solid #c7d0dd;
+    box-shadow: 3px 3px rgba(0,0,0,0.5);
   }
   .button > p{
     font-size: 85%;
   }
-}
+  #addGroup,#addContact{
+    width: 40%;
+    font-size: 90%;
+  }
+  .contact,.group{
+    width: 80%;
+    font-size: 70%;
+  }
+  input{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #billContainer{
+    width: 80%;
+  }
 
+}
 @media all and (max-width: 1000px) {
-  #logo{
+  .logo{
     right: 0;
   }
 }
 
-@media all and (min-width: 2000px) {
+/*
+  .contact,.group{
+    width: 80%;
+    font-size: 120%;
+  }
+  #addGroupContainer > p,#addContactContainer > p{
+    font-size: 130%;
+  }
+  input{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  #submitGroupInformation,#submitContactInformation{
+    padding: 10px;
+    margin-top: 5%;
+    width: 70%;
+    font-size: 120%;
+  }
+}*/
+
+
+@media all and (min-width: 2001px) {
   .navbar-nav > li{
     font-size: 22px;
   }
 }
 
-
-/* CSS for bill split page */
-/* CSS not finished */
-#billContainer{
-  position: absolute;
-  background-color: grey; /*Colour for testing purposes */
-  width: 80%;
+/* DEBT PAGE CSS */
+#overallContainer{
+  margin: auto;
+  width: 90%;
   height: 70%;
-  margin-left: 10%;
-
-}
-#amountContainer{
-  background-color: lightgrey;  /*Colour for testing purposes */
-}
-
-/* CSS for group page */
-
-#addGroup{
-  background-color: red; /*Colour for testing purposes */
-  width: 15%;
-  float: right;
-}
-
-#contactsContainer{
-  position: absolute;
-  width: 50%;
-  height: 60%;
-  background-color: lightgrey;
-  margin-left: 10%;
-  border-color: black;
-  border-style: solid;
-
-}
-.contact{
   text-align: center;
-  border-color: black;
-  border-bottom-style: solid;
-
 }
-.contact:hover{
-  background-color: white;
+.individualDebtElement{
+  background-color: rgba(255,255,255,0.5);
+  border-style: solid;
+  border-color: black;
 }
