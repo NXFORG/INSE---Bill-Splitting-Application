@@ -16,6 +16,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img class="logo" src="images/logo.png" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,15 +33,85 @@
    </nav>
 
     <header class="jumbotron jumbotron-fluid">
-      <h1> Contacts </h1>
+       <h1> Contacts </h1>
     </header>
-    <div id='contactsContainer'>  <!-- Content container -->
-      <div class='contact'> <p> dummy contact 1</p> </div>
-      <div class='contact'> <p> dummy contact 2</p> </div>
-      <div class='contact'> <p> dummy contact 3</p> </div>
+    <div id="buttonsContainer">
+     <div id='addContainer'>
+     <div id="addContact">
+      <p> Add Contact </p>
+     </div>
+     <div id="addGroup">
+       <p> Add Group </p>
+     </div>
     </div>
-    <div id='addGroup'> <!-- I just made basic div to do allow me to work with JS -->
-      <p> Add Group </p>
+  </div>
+
+
+       <div id='contactsContainer'>  <!-- Main content container (contains both contacts/groups.)-->
+      <div id='contactsOverview'>
+        <h3> Contacts </h3>
+        <div id='addContactContainer'> <!-- Container initially hidden. -->
+          <p> New Contact Name </p>
+            <input id='contactNameInput' type='text'/>
+          <p> New Contact Phone </p>
+            <input id='contactPhoneInput' type='text'/>
+          <p> New Contact Description </p>
+            <input id='contactDescriptionInput' type='text'/><br>
+          <button id='submitContactInformation'> Submit </button>
+        </div>
+
+        <div id='contactList'>
+          <div class='contact'>
+            <p> DUMMY CONTACT </p>
+          </div>
+          <div class='contact'>
+            <p> DUMMY CONTACT2 </p>
+          </div>
+        </div>
+
+        <div id='displayContact'>
+          <p id='displayContactName'>Contact Name: </p>
+          <p id='displayContactPhone'>Contact Phone: </p>
+          <p id='displayContactDescription'>Contact Description: </p>
+          <button id='deleteContactBtn'> Delete Contact </p>
+          <button id='displayContactBackBtn'> Back </p>
+        </div>
+
+      </div>
+
+
+      <div id='groupsOverview'>
+        <h3> Groups </h3>
+
+        <div id=addGroupContainer> <!-- Container initially hidden. -->
+          <p> New Group Name </p>
+            <input id='groupNameInput' type='text'/>
+          <p> New Group Description </p>
+            <input id='groupDescriptionInput' type='text'/>
+          <p> New Group Members </p>
+            <textarea rows='5' cols='45' id='groupMembersInput' type='text' disabled></textarea><br>
+            <button id='submitGroupInformation'> Submit </button>
+        </div>
+
+        <div id='groupList'>
+          <div class='group'>
+            <p> DUMMY group </p>
+          </div>
+          <div class='group'>
+            <p> DUMMY group2 </p>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+        <script
+    			  src="http://code.jquery.com/jquery-3.3.1.min.js"
+    			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    			  crossorigin="anonymous"></script>
+
+
+    <script src="scripts/contactScript.js"></script>
   </body>
- </html>
+
+</html>

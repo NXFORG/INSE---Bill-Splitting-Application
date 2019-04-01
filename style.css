@@ -103,12 +103,15 @@ main{
   font-size: 200%;
   color: black;
 }
+/*no underline when the user hovers over the link*/
 a:hover{
     text-decoration: none;
 }
+/*button background colour is changed when the user hovers over it */
 .button:hover{
   background-color: #dee1e8;
 }
+/*button background colour changed and box shadow created when button is clicked*/
 .button:active{
   background-color: #dee1e8;
   box-shadow: inset 2px 2px;
@@ -139,6 +142,7 @@ a:hover{
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
 }
+/*container for layout of content on the 'splitbill' page*/
 #billContainer{
   width: 30%;
   margin-left: auto;
@@ -149,16 +153,19 @@ a:hover{
   margin-bottom: 20px;
   padding: 20px;
 }
+/*contains inputs on the splitbill page*/
 #amountContainer > h3{
     text-align: center;
     font-family: 'code';
     margin-bottom: 20px;
     margin-top: 20px;
 }
+/*container for the submit button on the splitbill page*/
 #btnContainer{
   display: flex;
   justify-content: center;
 }
+/*button for confirming details of the split*/
 #confirmAmountBtn{
   margin-top: 20px;
   border-radius: 5px;
@@ -166,6 +173,7 @@ a:hover{
   width: 80%;
   padding: 10px;
 }
+/* hovering over the split button changes its colour*/
 #confirmAmountBtn:hover{
   background-color: #60bcea;
   border-color: white;
@@ -182,7 +190,7 @@ a:hover{
   text-align: center;
   padding-top: 15px;
 }
-
+/*button for adding a new group*/
 #addGroup{
   background-color: white;
   border-color: #c7d0dd;
@@ -193,13 +201,15 @@ a:hover{
   text-align: center;
   padding-top: 15px;
 }
+/*hovering over the add group and add contact buttons changes their background colour*/
 #addGroup:hover,#addContact:hover{
   background-color: #dee1e8;
 }
+/*clicking on the add group button changes its background colour*/
 #addGroup:active,#addContact:active{
   box-shadow: inset 2px 2px;
 }
-
+/*container for the adding contacts layouts*/
 #contactsContainer{
   position: absolute;
   width: 80%;
@@ -212,26 +222,26 @@ a:hover{
   text-align: center;
   padding: 20px;
 }
+/*container for the adding contacts inputs*/
 #contactsOverview{
   font-family: 'lml';
   width: 50%;
   height: 100%;
   float: left;
 }
+/*container for the adding groups inputs*/
 #groupsOverview{
   font-family: 'lml';
   width: 50%;
   height: 100%;
   float: right;
 }
-#contactsOverview > h3{
+/*styling subtitles on the group page*/
+#contactsOverview > h3, #groupsOverview > h3{
   margin-bottom: 20px;
   text-decoration: underline;
 }
-#groupsOverview > h3{
-  margin-bottom: 20px;
-  text-decoration: underline;
-}
+/*links for the user's existing groups and contacts*/
 .contact,.group{
   width: 40%;
   margin-left: auto;
@@ -239,9 +249,11 @@ a:hover{
   padding-top: 20px;
   padding-bottom: 5px;
 }
+/*hovering over group and contact links changes background colour*/
 .contact:hover,.group:hover{
   background-color: white;
 }
+/*contains form for adding a new contact*/
 #addContactContainer{
   display: none; /* Hides content until button is pressed. */
 }
@@ -249,47 +261,56 @@ a:hover{
   text-align: center;
 
 }
+/*contains form for adding a new group*/
 #addGroupContainer{
   display: none; /* Hides content until button is pressed. */
 }
+/*button displaying the contact's details*/
 #displayContact{
   display: none;
   background-color: rgba(215, 212, 219);
 }
+/*input boxes for contact information*/
 #contactNameInput,#contactPhoneInput,#contactDescriptionInput{
   width: 70%;
   padding: 10px;
   margin-bottom: 10px;
 }
+/*input boxes for group information*/
 #groupNameInput,#groupMembersInput,#groupDescriptionInput{
   width: 70%;
   padding: 10px;
   margin-bottom: 10px;
 }
+/*box for entering new group members*/
 textarea{
   width: 70%;
 }
+/*input box for enetering bill amount*/
 #amountInput{
   display: flex;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
+/*button for confirming contact and group details*/
 #submitGroupInformation,#submitContactInformation{
   padding: 10px;
   margin-top: 5%;
   width: 70%;
 }
-/* media queries to scale content on smaller devices*/
+/*dropdown menu and radio buttons for selecting bill-split type and group choice*/
 #splitSelection,#groupSelection{
   width: 50%;
   margin-left: auto;
   margin-right: auto;
 }
+/*labels for bill-split types*/
 label{
   margin-left: 5px;
   font-family: 'lml';
 }
+/*media queries for different sized screens to make page content more responsive to screen size*/
 @media all and (max-width: 1200px) {
   #billContainer{
     width: 50%;
@@ -322,31 +343,11 @@ label{
 
 }
 @media all and (max-width: 1000px) {
+  /*move app logo to the top-right on small screens*/
   .logo{
     right: 0;
   }
 }
-
-/*
-  .contact,.group{
-    width: 80%;
-    font-size: 120%;
-  }
-  #addGroupContainer > p,#addContactContainer > p{
-    font-size: 130%;
-  }
-  input{
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  #submitGroupInformation,#submitContactInformation{
-    padding: 10px;
-    margin-top: 5%;
-    width: 70%;
-    font-size: 120%;
-  }
-}*/
-
 
 @media all and (min-width: 2001px) {
   .navbar-nav > li{
