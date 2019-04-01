@@ -17,6 +17,7 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img class="logo" src="images/logo.png" alt="">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,24 +38,29 @@
 
     <div id='billContainer'>
       <div id='amountContainer'>
-        <h3> Total Amount (£) </h3>
-        <input id='amountInput' type='text' name="amountInput"/>
+        <h3> Total Amount: </h3>
+        <input type='text' name="amountInput"/>
         <h3> Select Group </h3>
         <form><select>
           <option selected="selected" value="1">Group</option>
           </select></form>
           <h3> Splitting Method </h3>
-          <form>
-	           <input checked="checked" name="Splitting Method" type="radio" value="Standard" /> Standard <br />
-	            <input name="Splitting Method" type="radio" value="Dutch" /> Dutch <br />
-            </form>
-        <button id='confirmAmountBtn' type="button">Confirm Amount</button>
+         <form>
+	        <input checked="checked" name="Splitting Method" type="radio" value="Standard"/><label for="Standard">Standard</label><br>
+	        <input name="Splitting Method" type="radio" value="Dutch"/><label for="Dutch">Dutch</label>
+         </form>
+        <div id="btnContainer">
+         <button id='confirmAmountBtn' type="button">Confirm Amount</button>
+        </div>
       </div>
-
-
     </div>
+	  
+	      <script
+    			  src="http://code.jquery.com/jquery-3.3.1.min.js"
+    			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    			  crossorigin="anonymous"></script>
 
-    <script src="script.js"></script>
+    <script src="scripts/billScript.js"></script>
   </body>
 
 </html>

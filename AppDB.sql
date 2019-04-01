@@ -8,6 +8,13 @@ create table user (
   lname varchar(30) not null
 );
 
+create table contact (
+  contactId int AUTO_INCREMENT primary key,
+  contactName varchar(30) not null,
+  contactPhone int not null,
+  contactDesc varchar(140) not null
+);
+
 create table restaurant (
   restaurantId int AUTO_INCREMENT primary key,
   restaurantName varchar(40) not null

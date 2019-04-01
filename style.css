@@ -142,6 +142,7 @@ a:hover{
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
 }
+
 /*container for layout of content on the 'splitbill' page*/
 #billContainer{
   width: 30%;
@@ -153,6 +154,7 @@ a:hover{
   margin-bottom: 20px;
   padding: 20px;
 }
+
 /*contains inputs on the splitbill page*/
 #amountContainer > h3{
     text-align: center;
@@ -165,6 +167,7 @@ a:hover{
   display: flex;
   justify-content: center;
 }
+
 /*button for confirming details of the split*/
 #confirmAmountBtn{
   margin-top: 20px;
@@ -201,6 +204,7 @@ a:hover{
   text-align: center;
   padding-top: 15px;
 }
+
 /*hovering over the add group and add contact buttons changes their background colour*/
 #addGroup:hover,#addContact:hover{
   background-color: #dee1e8;
@@ -229,6 +233,7 @@ a:hover{
   height: 100%;
   float: left;
 }
+
 /*container for the adding groups inputs*/
 #groupsOverview{
   font-family: 'lml';
@@ -236,6 +241,7 @@ a:hover{
   height: 100%;
   float: right;
 }
+
 /*styling subtitles on the group page*/
 #contactsOverview > h3, #groupsOverview > h3{
   margin-bottom: 20px;
@@ -249,6 +255,7 @@ a:hover{
   padding-top: 20px;
   padding-bottom: 5px;
 }
+
 /*hovering over group and contact links changes background colour*/
 .contact:hover,.group:hover{
   background-color: white;
@@ -261,6 +268,7 @@ a:hover{
   text-align: center;
 
 }
+
 /*contains form for adding a new group*/
 #addGroupContainer{
   display: none; /* Hides content until button is pressed. */
@@ -270,18 +278,21 @@ a:hover{
   display: none;
   background-color: rgba(215, 212, 219);
 }
+
 /*input boxes for contact information*/
 #contactNameInput,#contactPhoneInput,#contactDescriptionInput{
   width: 70%;
   padding: 10px;
   margin-bottom: 10px;
 }
+
 /*input boxes for group information*/
 #groupNameInput,#groupMembersInput,#groupDescriptionInput{
   width: 70%;
   padding: 10px;
   margin-bottom: 10px;
 }
+
 /*box for entering new group members*/
 textarea{
   width: 70%;
@@ -299,6 +310,7 @@ textarea{
   margin-top: 5%;
   width: 70%;
 }
+
 /*dropdown menu and radio buttons for selecting bill-split type and group choice*/
 #splitSelection,#groupSelection{
   width: 50%;
@@ -310,6 +322,7 @@ label{
   margin-left: 5px;
   font-family: 'lml';
 }
+
 /*media queries for different sized screens to make page content more responsive to screen size*/
 @media all and (max-width: 1200px) {
   #billContainer{
@@ -348,6 +361,7 @@ label{
     right: 0;
   }
 }
+
 
 @media all and (min-width: 2001px) {
   .navbar-nav > li{
