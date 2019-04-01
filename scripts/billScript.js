@@ -1,21 +1,7 @@
 'use strict';
 
-//Script for contacts:
-let contactBtn = document.getElementById('addContact');
-contactBtn.addEventListener('click', addContactFunction);
-
-
-function addContactFunction(){
-  alert('hello');
-
-}
-
 //Script for the bill split:
-let amountInput = document.getElementById('amountInput');
-let confirmAmountBtn = document.getElementById('confirmAmountBtn');
-confirmAmountBtn.addEventListener('click', amountValidation);
-
-function amountValidation(){
+$('#confirmAmountBtn').click(function(){
   //Checks data type:
   if(isNaN(amountInput.value)){
     alert('Error must enter a valid number.');
@@ -28,4 +14,4 @@ function amountValidation(){
        let finalValue = Math.round(amountInput.value * 100) / 100;
     }
   }
-}
+});
