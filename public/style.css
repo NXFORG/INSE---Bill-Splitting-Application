@@ -381,3 +381,19 @@ label{
   border-style: solid;
   border-color: black;
 }
+
+/*VOUCHER PAGE CSS */
+#voucherContainer{
+  margin: auto;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+.voucher{
+  height: auto;
+  background-color: gold;
+  height: 40px;
+}
+.voucher:hover{
+  background-color: cyan;
+}
