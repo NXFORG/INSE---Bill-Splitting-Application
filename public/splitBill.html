@@ -37,6 +37,26 @@
     </header>
 
     <div id='billContainer'>
+	    
+	    <div id='splitChoice'>
+        <h3> Choose split type: </h3>
+        <select id='splitDecisionSelect'>
+          <option value='quickSplit'>Quick Split</option>
+          <option value='groupSplit'>Group Split</option>
+        </select>
+        <button id='submitSplitType'>Submit</button>
+      </div>
+
+      <div id='quickChoice'>
+        <h3> Total Amount: </h3>
+        <input id='quickCost' type='text' name="amountInput"/>
+        <h3> Amount of People: </h3>
+        <input id='quickQuantity' type='text' name="amountInput"/>
+        <p id='quickCostDisplay'> Cost per person: £ </p>
+        <button id='quickCalc'>Submit</button>
+        <button class='backBtn'>Back</button>
+      </div>
+	    
       <div id='amountContainer'>
         <h3> Total Amount: </h3>
         <input type='text' name="amountInput"/>
