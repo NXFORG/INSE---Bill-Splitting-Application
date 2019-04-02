@@ -1,26 +1,25 @@
 create database Slice;
-
 use Slice;
 
-create table user (
+drop table if exists user;
+drop table if exists restaurant;
+drop table if exists vouchers;
+drop table if exists transaction;
+drop table if exists split_method;
+
+
+create table if not exists user (
   userId int AUTO_INCREMENT primary key,
   fname varchar(30) not null,
   lname varchar(30) not null
 );
 
-create table contact (
-  contactId int AUTO_INCREMENT primary key,
-  contactName varchar(30) not null,
-  contactPhone int not null,
-  contactDesc varchar(140) not null
-);
-
-create table restaurant (
+create table if not exists restaurant (
   restaurantId int AUTO_INCREMENT primary key,
   restaurantName varchar(40) not null
 );
 
-create table vouchers (
+create table if not exists vouchers (
   vouchId int AUTO_INCREMENT primary key,
   valid_from date not null,
   valid_until date,
@@ -29,7 +28,7 @@ create table vouchers (
   constraint restaurantId foreign key (restaurantId) references restaurant(restaurantId)
 );
 
-create table transaction (
+create table if not exists transaction (
   transId int AUTO_INCREMENT primary key,
   transDate date not null,
   transTime time not null,
@@ -39,7 +38,7 @@ create table transaction (
   constraint vouchId foreign key (vouchId) references vouchers(vouchId)
 );
 
-create table split_method (
+create table if not exists split_method (
   splitId int not null primary key,
   splitName varchar(20) not null
 );
