@@ -1,4 +1,4 @@
-Rules:
+# Rules:
 
 1) Evidence of testing required before committing
 2) Every time a commit is made, server-side testing required. If it doesn't work, 
