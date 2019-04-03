@@ -1,6 +1,7 @@
 This file contains all of the automated tests for our program.
 
 We used mocha and chai to do our automated testing.
+Ref: https://github.com/npatro/javascript-unit-testing-with-mocha
 
 To run the automated tests:
 
