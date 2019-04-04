@@ -13,8 +13,16 @@ $.ajax({
         firstInfo.textContent = 'Name: ' + item.Name + ' ' + item.Type + ' £' + item.Amount;
         let secondInfo = document.createElement('p');
         secondInfo.textContent = 'Debt created: ' + item.Date + ' Description: ' + item.Description;
-        container.appendChild(firstInfo);
-        container.appendChild(secondInfo);
+          container.appendChild(firstInfo);
+          container.appendChild(secondInfo);
+          let payPal = document.createElement('img');
+          payPal.className = 'payImg';
+          let payLink = document.createElement('a');
+          payPal.src = '../images/paypal.png'
+          payLink.href = 'https://www.paypal.com/uk/home';
+          payLink.appendChild(payPal);
+          container.appendChild(payLink);
+
         $('#overallContainer').append(container);
     })
   }
