@@ -322,7 +322,11 @@ label{
   margin-left: 5px;
   font-family: 'lml';
 }
-
+/*style for percentage input on bill split page */
+.dutchPercentInput{
+  width: 25px;
+  text-align: center;
+}
 /*media queries for different sized screens to make page content more responsive to screen size*/
 @media all and (max-width: 1200px) {
   #billContainer{
