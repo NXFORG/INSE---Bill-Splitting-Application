@@ -1,0 +1,23 @@
+[
+{
+  "Name": "Mary",
+  "Amount": "20.00",
+  "Type": "Owes",
+  "Date": "15/03/2019",
+  "Description": "Nandos"
+},
+{
+  "Name": "Mark",
+  "Amount": "15.00",
+  "Type": "You owe",
+  "Date": "21/03/2019",
+  "Description": "Dominos pizza night"
+},
+{
+  "Name": "Matt",
+  "Amount": "8.50",
+  "Type": "Owes",
+  "Date": "03/02/2019",
+  "Description": "Burger King"
+}
+]

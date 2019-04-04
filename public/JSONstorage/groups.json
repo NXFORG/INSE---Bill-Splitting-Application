@@ -1,0 +1,26 @@
+[
+  {
+    "Name": "Zizzis Group",
+    "Description": "Dummy group of people whom go to Zizzis regularly.",
+    "Members": ["Mary", "Matt", "Mark", "Tom"],
+    "Size": "4"
+  },
+  {
+    "Name": "Nandos Group",
+    "Description": "Dummy group of people whom go to Nandos regularly.",
+    "Members": ["Mike", "Harry", "Lucy"],
+    "Size": "3"
+  },
+  {
+    "Name": "Dominos Group",
+    "Description": "Dummy group of people whom go to Dominos regularly.",
+    "Members": ["Leo", "George"],
+    "Size": "2"
+  },
+  {
+    "Name": "Pizza Hut Group",
+    "Description": "Dummy group of people whom go to Nandos regularly.",
+    "Members": ["Bob", "Chris", "Sophie", "Anna","Jerry"],
+    "Size": "5"
+  }
+]
