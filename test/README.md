@@ -1,3 +1,5 @@
+# Test Information
+
 This file contains all of the automated tests for our program.
 
 We used mocha and chai to do our automated testing.
