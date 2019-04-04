@@ -385,6 +385,10 @@ label{
   border-style: solid;
   border-color: black;
 }
+.payImg{
+  width: 70px;
+  height: 35px;
+}
 
 /*VOUCHER PAGE CSS */
 #voucherContainer{
