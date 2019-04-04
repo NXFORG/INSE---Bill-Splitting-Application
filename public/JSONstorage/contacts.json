@@ -1,0 +1,17 @@
+[
+  {
+    "Name":"Mary",
+    "Phone":"07925605241",
+    "Description":"First dummy contact"
+  },
+  {
+    "Name":"Tom",
+    "Phone":"01839104910",
+    "Description":"Second dummy contact"
+  },
+  {
+    "Name":"John",
+    "Phone":"09388391275",
+    "Description":"Third dummy contact"
+  }
+]
