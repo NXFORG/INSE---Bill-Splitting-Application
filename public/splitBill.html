@@ -35,10 +35,12 @@
     <header class="jumbotron jumbotron-fluid">
       <h1> Split Your Bills </h1>
     </header>
+  <div id='splitDecision'>
+    </div>
 
     <div id='billContainer'>
-	    
-	    <div id='splitChoice'>
+
+      <div id='splitChoice'>
         <h3> Choose split type: </h3>
         <select id='splitDecisionSelect'>
           <option value='quickSplit'>Quick Split</option>
@@ -54,24 +56,34 @@
         <input id='quickQuantity' type='text' name="amountInput"/>
         <p id='quickCostDisplay'> Cost per person: £ </p>
         <button id='quickCalc'>Submit</button>
-        <button class='backBtn'>Back</button>
+        <button class='billSplitBackButton'>Back</button>
       </div>
-	    
+
       <div id='amountContainer'>
         <h3> Total Amount: </h3>
-        <input type='text' name="amountInput"/>
+        £<input id='amountCostInput' type='text' name="amountInput"/>
         <h3> Select Group </h3>
-        <form><select>
-          <option selected="selected" value="1">Group</option>
-          </select></form>
+        <form >
+          <select id='splitGroupSelect'>
+            <!-- Filled by JS -->
+          </select>
+        </form>
           <h3> Splitting Method </h3>
          <form>
-	        <input checked="checked" name="Splitting Method" type="radio" value="Standard"/><label for="Standard">Standard</label><br>
-	        <input name="Splitting Method" type="radio" value="Dutch"/><label for="Dutch">Dutch</label>
+	        <input id='standardRadio' checked="checked" name="Splitting Method" type="radio" value="Standard"/><label for="Standard">Standard</label><br>
+	        <input id='dutchRadio' name="Splitting Method" type="radio" value="Per"/><label for="Dutch">Percentage</label>
          </form>
+
+         <div id='dutchContainer'>
+           <h3> Enter percent per person: </h3>
+
+         </div>
+
         <div id="btnContainer">
          <button id='confirmAmountBtn' type="button">Confirm Amount</button>
+         <button class='billSplitBackButton' type="button">Back</button>
         </div>
+        <p id='groupCostPerPerson'>Cost per person: </p>
       </div>
     </div>
 	  
