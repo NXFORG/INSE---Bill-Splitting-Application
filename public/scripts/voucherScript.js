@@ -2,7 +2,7 @@
 
 $.ajax({
   type: 'GET',
-  url: 'vouchers.json',
+  url: './JSONstorage/vouchers.json',
   dataType: 'json',
   success: function(data){
     $.each(data, function(index, item){
