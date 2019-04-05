@@ -251,7 +251,8 @@ a:hover{
 #addGroupContainer{
   display: none; /* Hides content until button is pressed. */
 }
-#displayContact{
+/*button displaying the contact's details*/
+#displayContact, #displayGroup{
   display: none;
   background-color: rgba(215, 212, 219);
 }
