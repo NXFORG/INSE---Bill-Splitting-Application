@@ -42,5 +42,9 @@ The user can view a series of vouchers for particular restaurants and other comp
 Viewing/Sorting Outstanding Debt
 ---------------------------------
 
+The user can view the outstanding debt that is either owed to them or that they owe to someone else. The users previous outstanding debts are loaded when the page is opened from the database. There are links which when pessed will direct the user to paypal which if they have a registered account they can settle their debts. Each individual debt also has the option to be deleted if the user desires. 
+
+The user can choose to add new debts whenever they want by simply clicking "Add Debt" and entering the relevant information about their debt into the form provided.
+
 
 # Other Information
