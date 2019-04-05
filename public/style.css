@@ -274,7 +274,7 @@ a:hover{
   display: none; /* Hides content until button is pressed. */
 }
 /*button displaying the contact's details*/
-#displayContact{
+#displayContact, #displayGroup{
   display: none;
   background-color: rgba(215, 212, 219);
 }
