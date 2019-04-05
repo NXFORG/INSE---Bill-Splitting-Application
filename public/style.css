@@ -409,17 +409,19 @@ label{
   width: 50%;
 }
 /*VOUCHER PAGE CSS */
+/*VOUCHER PAGE CSS */
 #voucherContainer{
   margin: auto;
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 90%;
   text-align: center;
+
 }
 .voucher{
   height: auto;
-  background-color: gold;
-  height: 40px;
+  margin: 0;
+  padding: 0;
+  height: 25%;
+  font-size: 1em;
 }
-.voucher:hover{
-  background-color: cyan;
-}
+
