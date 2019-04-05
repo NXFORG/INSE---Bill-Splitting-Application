@@ -1,7 +1,4 @@
 'use strict';
-//Boolean to determine button actions:
-let addGroupBtnCheck = new Boolean(false);
-
 //Functions to update each listing:
 loadContacts();
 loadGroups();
@@ -100,11 +97,15 @@ $('#submitContactInformation').click(function submitContactFunction(){
       let contactTag = document.createElement('p');
       contactTag.textContent = contactName;
       newContact.className = 'contact';
+      if(document.getElementById('contactList').childElementCount % 2){
+        newContact.style.backgroundColor = 'lightgrey';
+      } else {
+        newContact.style.backgroundColor = 'white';
+      }
       newContact.appendChild(contactTag);
       document.getElementById('contactList').appendChild(newContact);
       $('#addContactContainer').hide();
       $('#contactList').show();
-      updateContactList();
       getContactDetails();
     }
 });
@@ -118,7 +119,6 @@ $('#displayContactBackBtn').click(function(){
 
 //Function for add group button:
 $('#addGroup').click(function addGroupFunction(){
-  addGroupBtnCheck = true;
   $('#groupList').hide();
   $('#addContactContainer').hide();
   $('#addGroupContainer').show();
@@ -127,7 +127,6 @@ $('#addGroup').click(function addGroupFunction(){
 
 //Function for submitting a new group:
 $('#submitGroupInformation').click(function submitGroupFunction(){
-  addGroupBtnCheck = false;
   let groupName = document.getElementById('groupNameInput').value;
   let groupDescription = document.getElementById('groupDescriptionInput').value;
   let groupMembers = document.getElementById('groupMembersInput').value;
@@ -140,36 +139,28 @@ $('#submitGroupInformation').click(function submitGroupFunction(){
   } else if(groupName === '' || groupDescription === '' || groupMembers === ''){
         alert('Cannot have an empty field.');
   } else {
+    let newGroup = document.createElement('div');
+    let groupTag = document.createElement('p');
+    groupTag.textContent = groupName;
+    newGroup.className = 'group';
+
+    if(document.getElementById('groupList').childElementCount % 2){
+      newGroup.style.backgroundColor = 'lightgrey';
+    } else {
+      newGroup.style.backgroundColor = 'white';
+    }
+
+    newGroup.appendChild(groupTag);
+    document.getElementById('groupList').appendChild(newGroup);
+
         //Adjusts visibility of elements:
         $('#addGroupContainer').hide();
         $('#groupList').show();
 
-        let newGroup = {
-          Name: groupName,
-          Description: groupDescription,
-          Members: groupMembers
-        }
-
-        let newGroupString = JSON.stringify(newGroup);
-
-
-        $.ajax({
-          type: 'POST',
-          url: './JSONstorage/groups.json',
-          dataType: 'json',
-          data: newGroupString,
-          success: function(data){
-            alert(newGroupString);
-            url.html(data);
-
-          }
-        });
-
-
-        //call update
-
   }
 });
+
+
 
 //Function for returning to list of groups after viewing info about a single group:
 $('#displayGroupBackBtn').click(function backToGroupList(){
