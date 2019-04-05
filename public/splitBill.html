@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -46,7 +46,9 @@
           <option value='quickSplit'>Quick Split</option>
           <option value='groupSplit'>Group Split</option>
         </select>
-        <button id='submitSplitType'>Submit</button>
+        <div id="btnContainer">
+         <button id='submitSplitType'>Submit</button>
+        </div>
       </div>
 
       <div id='quickChoice'>
@@ -55,8 +57,10 @@
         <h3> Amount of People: </h3>
         <input id='quickQuantity' type='text' name="amountInput"/>
         <p id='quickCostDisplay'> Cost per person: £ </p>
-        <button id='quickCalc'>Submit</button>
-        <button class='billSplitBackButton'>Back</button>
+        <div id="btnContainer">
+         <button id='quickCalc'>Submit</button>
+         <button class='billSplitBackButton'>Back</button>
+        </div>
       </div>
 
       <div id='amountContainer'>
@@ -86,7 +90,7 @@
         <p id='groupCostPerPerson'>Cost per person: </p>
       </div>
     </div>
-	  
+
 	      <script
     			  src="http://code.jquery.com/jquery-3.3.1.min.js"
     			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -149,23 +149,27 @@ a:hover{
   margin-bottom: 20px;
   padding: 20px;
 }
-#amountContainer > h3{
+#amountContainer > h3,#quickChoice h3,#splitChoice h3,#addDebtContainer h3{
     font-family: 'code';
     margin-bottom: 20px;
     margin-top: 20px;
+}
+#splitChoice{
+  text-align: center;
 }
 #btnContainer{
   display: flex;
   justify-content: center;
 }
-#confirmAmountBtn{
+#confirmAmountBtn,.billSplitBackButton,#quickCalc,#submitSplitType,#debtSubmit,#debtBack{
+  margin: 5px;
   margin-top: 20px;
   border-radius: 5px;
   background-color: white;
   width: 80%;
   padding: 10px;
 }
-#confirmAmountBtn:hover{
+#confirmAmountBtn:hover,.billSplitBackButton:hover,#quickCalc:hover,#submitSplitType:hover{
   background-color: #60bcea;
   border-color: white;
   color: white;
@@ -357,7 +361,7 @@ label{
   text-align: center;
 }
 .payImg{
-  width: 70px;
+  width: 90px;
   height: 35px;
 }
 #addDebt{
@@ -376,10 +380,9 @@ label{
 #addDebtContainer{
   background-color: rgba(255,255,255,0.5);
   margin: auto;
-  width: 50%;
-  text-align: center;
-  border-style: solid;
-  border-color: white;
+  padding: 20px;
+  width: 20%;
+  border-radius: 10px;
 }
 #addDebtContainer > input{
   width: 50%;
