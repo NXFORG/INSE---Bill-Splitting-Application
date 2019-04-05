@@ -157,7 +157,7 @@ a:hover{
 #splitChoice{
   text-align: center;
 }
-#btnContainer{
+.btnContainer{
   display: flex;
   justify-content: center;
 }
@@ -288,9 +288,45 @@ label{
   width: 25px;
   text-align: center;
 }
+
+/* DEBT PAGE CSS */
+#overallContainer{
+  margin: auto;
+  width: 90%;
+  height: 70%;
+  text-align: center;
+}
+.payImg{
+  width: 90px;
+  height: 35px;
+}
+#addDebt{
+  background-color: white;
+  border-color: #c7d0dd;
+  box-shadow: 5px 5px rgba(0,0,0,0.5);
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+#addDebt:hover{
+  background-color: lightgrey;
+}
+#addDebtContainer{
+  background-color: rgba(255,255,255,0.5);
+  margin: auto;
+  padding: 20px;
+  width: 20%;
+  border-radius: 10px;
+}
+#addDebtContainer > input{
+  width: 50%;
+}
+
 /*media queries for different sized screens to make page content more responsive to screen size*/
 @media all and (max-width: 1200px) {
-  #billContainer{
+  #billContainer,#addDebtContainer{
     width: 50%;
   }
 }
@@ -315,7 +351,7 @@ label{
     padding-top: 5px;
     padding-bottom: 5px;
   }
-  #billContainer{
+  #billContainer,#addDebtContainer{
     width: 80%;
   }
 
@@ -352,42 +388,6 @@ label{
     font-size: 22px;
   }
 }
-
-/* DEBT PAGE CSS */
-#overallContainer{
-  margin: auto;
-  width: 90%;
-  height: 70%;
-  text-align: center;
-}
-.payImg{
-  width: 90px;
-  height: 35px;
-}
-#addDebt{
-  background-color: white;
-  border-color: #c7d0dd;
-  box-shadow: 5px 5px rgba(0,0,0,0.5);
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 15px;
-}
-#addDebt:hover{
-  background-color: lightgrey;
-}
-#addDebtContainer{
-  background-color: rgba(255,255,255,0.5);
-  margin: auto;
-  padding: 20px;
-  width: 20%;
-  border-radius: 10px;
-}
-#addDebtContainer > input{
-  width: 50%;
-}
-/*VOUCHER PAGE CSS */
 /*VOUCHER PAGE CSS */
 #voucherContainer{
   margin: auto;
