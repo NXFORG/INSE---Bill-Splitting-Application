@@ -1,17 +1,37 @@
 'use strict';
 
+//Function to retrieve data from JSON file and create the vouchers:
 $.ajax({
   type: 'GET',
   url: './JSONstorage/vouchers.json',
   dataType: 'json',
   success: function(data){
     $.each(data, function(index, item){
-        let itemString = JSON.stringify(item);
-        itemString = itemString.replace(/\"([^(\")"]+)\":/g,"$1:");
+
+        //For each item in the JSON array, create a voucher and assign corrosponding values:
         let newVoucher = document.createElement('div');
         newVoucher.className = 'voucher';
-        $(newVoucher).append($('<p>').text(itemString));
-        $('#voucherContainer').append(newVoucher);
+        let voucherText = document.createElement('p');
+        voucherText.textContent = 'Voucher for ' + item.Name; + '. Value: ' + item.Discount;
+        let voucherText2 = document.createElement('p');
+        voucherText2.textContent = 'Voucher Code: ' + item.Code; + '. Valid till:' + item.Valid;
+        let Click = 'Click To Redeem!';
+      
+        //Code to alternate the background colouring of the vouchers:
+        if(index % 2){
+          newVoucher.style.backgroundColor = 'lightgrey';
+        } else {
+          newVoucher.style.backgroundColor = 'white';
+        }
+
+        //Appends the information above to our new voucher and adds to voucher container:
+        newVoucher.append(voucherText);
+        newVoucher.append(voucherText2);
+        newVoucher.append(Click);
+        let voucherLink = document.createElement('a');
+        voucherLink.href = item.Link;
+        voucherLink.append(newVoucher);
+        $('#voucherContainer').append(voucherLink);
     })
   }
 });

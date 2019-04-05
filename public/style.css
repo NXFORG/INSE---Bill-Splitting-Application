@@ -278,7 +278,13 @@ label{
   margin-left: 5px;
   font-family: 'lml';
 }
-@media all and (max-width: 1500px) {
+/*style for percentage input on bill split page */
+.dutchPercentInput{
+  width: 25px;
+  text-align: center;
+}
+/*media queries for different sized screens to make page content more responsive to screen size*/
+@media all and (max-width: 1200px) {
   #billContainer{
     width: 50%;
   }
@@ -349,8 +355,47 @@ label{
   height: 70%;
   text-align: center;
 }
-.individualDebtElement{
+.payImg{
+  width: 70px;
+  height: 35px;
+}
+#addDebt{
+  background-color: white;
+  border-color: #c7d0dd;
+  box-shadow: 5px 5px rgba(0,0,0,0.5);
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 15px;
+}
+#addDebt:hover{
+  background-color: lightgrey;
+}
+#addDebtContainer{
   background-color: rgba(255,255,255,0.5);
+  margin: auto;
+  width: 50%;
+  text-align: center;
   border-style: solid;
-  border-color: black;
+  border-color: white;
+}
+#addDebtContainer > input{
+  width: 50%;
+}
+/*VOUCHER PAGE CSS */
+/*VOUCHER PAGE CSS */
+#voucherContainer{
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  text-align: center;
+
+}
+.voucher{
+  height: auto;
+  margin: 0;
+  padding: 0;
+  height: 25%;
+  font-size: 1em;
 }

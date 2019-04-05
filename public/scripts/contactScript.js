@@ -3,15 +3,80 @@
 let addGroupBtnCheck = new Boolean(false);
 
 //Functions to update each listing:
- updateContactList();
+loadContacts();
+loadGroups();
 
- updateGroupList();
 //Script for contacts:
 $('#addContact').click(function addContactFunction(){
   $('#contactList').hide();
   $('#displayContact').hide();
   $('#addContactContainer').show();
 });
+
+//Function for loading existing contacts into the application:
+function loadContacts(){
+  $.ajax({
+    type: 'GET',
+    url: './JSONstorage/contacts.json',
+    dataType: 'json',
+    success: function(data){
+      $.each(data, function(index, item){
+          //Creates a new contact element:
+          let loadedContact = document.createElement('div');
+          loadedContact.className = 'contact';
+          let contactTag = document.createElement('p');
+          contactTag.textContent = item.Name;
+          loadedContact.appendChild(contactTag);
+          document.getElementById('contactList').appendChild(loadedContact);
+          if(index % 2){
+            loadedContact.style.backgroundColor = 'lightgrey';
+          } else {
+            loadedContact.style.backgroundColor = 'white';
+          }
+          loadedContact.addEventListener('click', function(){
+            $('#contactList').hide();
+            $('#displayContact').show();
+            $('#displayContactName').text('Contact Name: ' + item.Name);
+            $('#displayContactPhone').text('Contact Phone: ' + item.Phone);
+            $('#displayContactDescription').text('Contact Description ' + item.Description);
+          });
+      })
+    }
+  });
+}
+
+//Function for loading existing groups into the application:
+function loadGroups(){
+  $.ajax({
+    type: 'GET',
+    url: './JSONstorage/groups.json',
+    dataType: 'json',
+    success: function(data){
+      $.each(data, function(index, item){
+        //Creates a new group element:
+        let loadedGroup = document.createElement('div');
+        let groupTag = document.createElement('p');
+        groupTag.textContent = item.Name;
+        loadedGroup.className = 'group';
+        loadedGroup.appendChild(groupTag);
+        document.getElementById('groupList').appendChild(loadedGroup);
+        if(index % 2){
+          loadedGroup.style.backgroundColor = 'lightgrey';
+        } else {
+          loadedGroup.style.backgroundColor = 'white';
+        }
+        loadedGroup.addEventListener('click', function(){
+          $('#groupList').hide();
+          $('#displayGroup').show();
+          $('#displayGroupName').text('Group Name: ' + item.Name);
+          $('#displayGroupDescription').text('Group Description: ' + item.Description);
+          $('#displayGroupMembers').text('Group Members ' + item.Members);
+        });
+      })
+    }
+  });
+
+}
 
 //Function for submitting a new contact:
 $('#submitContactInformation').click(function submitContactFunction(){
@@ -44,51 +109,12 @@ $('#submitContactInformation').click(function submitContactFunction(){
     }
 });
 
-//Updates the contents of contacts when a new element is added:
-function updateContactList(info){
-    let contactElements = document.getElementsByClassName('contact');
-    for(let i = 0; i < contactElements.length;  i++){
-      if(i % 2){
-        contactElements[i].style.backgroundColor = 'lightgrey';
-      } else {
-        contactElements[i].style.backgroundColor = 'white';
-      }
-
-
-    }
-}
-
-$('.contact').click(function onContactClick(){
-  if(addGroupBtnCheck){
-    let contact = document.getElementsByClassName('contact');
-    for(let i = 0; i < contact.length; i++){
-        contact[i].addEventListener('click', function getContactDetails(){
-          $('#contactList').hide();
-          $('#displayContact').show();
-          $('#displayContactName').text('Contact Name: ' + contact[i].textContent);
-          $('#displayContactPhone').text('Contact Phone: ');
-          $('#displayContactDescription').text('Contact Description ');
-        });
-      }
-    } else {
-      /// Here goes code for appending to text area.
-    }
-});
-
-
-
-
-
-
-
-
 //Function for returning to list of contacts after viewing info about a single contact:
-$('#displayContactBackBtn').click(function backToContactList(){
+$('#displayContactBackBtn').click(function(){
   $('#displayContact').hide();
   $('#contactList').show();
 });
 
-//GROUP JAVASCRIPT
 
 //Function for add group button:
 $('#addGroup').click(function addGroupFunction(){
@@ -98,27 +124,6 @@ $('#addGroup').click(function addGroupFunction(){
   $('#addGroupContainer').show();
   $('#contactList').show();
 });
-
-//Updates the contents of groups when a new element is added:
-function updateGroupList(){
-    let groupElements = document.getElementsByClassName('group');
-    for(let i = 0; i < groupElements.length;  i++){
-      if(i % 2){
-        groupElements[i].style.backgroundColor = 'lightgrey';
-      } else {
-        groupElements[i].style.backgroundColor = 'white';
-      }
-    }
-    //Adds event listener to the new element:
-    let group = document.getElementsByClassName('group');
-      for(let i = 0; i < group.length; i++){
-        group[i].addEventListener('click', function getContactDetails(){
-          $('#groupList').hide();
-          $('#displayGroup').show();
-          $('#displayGroupName').text('Group Name: '+ group[i].textContent);
-        });
-      }
-}
 
 //Function for submitting a new group:
 $('#submitGroupInformation').click(function submitGroupFunction(){
@@ -139,14 +144,30 @@ $('#submitGroupInformation').click(function submitGroupFunction(){
         $('#addGroupContainer').hide();
         $('#groupList').show();
 
-        //Creates a new group element:
-        let newGroup = document.createElement('div');
-        let groupTag = document.createElement('p');
-        groupTag.textContent = groupName;
-        newGroup.className = 'group';
-        newGroup.appendChild(groupTag);
-        document.getElementById('groupList').appendChild(newGroup);
-        updateGroupList();
+        let newGroup = {
+          Name: groupName,
+          Description: groupDescription,
+          Members: groupMembers
+        }
+
+        let newGroupString = JSON.stringify(newGroup);
+
+
+        $.ajax({
+          type: 'POST',
+          url: './JSONstorage/groups.json',
+          dataType: 'json',
+          data: newGroupString,
+          success: function(data){
+            alert(newGroupString);
+            url.html(data);
+
+          }
+        });
+
+
+        //call update
+
   }
 });
 
