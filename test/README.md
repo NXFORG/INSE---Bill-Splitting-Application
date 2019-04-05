@@ -10,7 +10,7 @@ To run the automated tests:
     Open up command prompt.
     Use "cd" to locate the file with the application in.
     Type "npm install mocha chai"
-    Run "npm server".
+    Run "npm server".  Essential must be on localhost:8080 to work!
     Type: "npm run test".
     View automated tests.
 
