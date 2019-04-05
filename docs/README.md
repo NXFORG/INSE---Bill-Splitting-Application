@@ -48,3 +48,7 @@ The user can choose to add new debts whenever they want by simply clicking "Add 
 
 
 # Other Information
+
+The program is first and foremost designed to be run in a mobile device (small screen). However, all of the user interface designs are fully scalable all the way from a desktop wide screen to a small mobile device. All of the user driven events are compatable with both mobile and pc also.
+
+Some features were cut out of the application due to lack of time or lack of contribution. The features that were cut are: google authentication log in system, sql database.
