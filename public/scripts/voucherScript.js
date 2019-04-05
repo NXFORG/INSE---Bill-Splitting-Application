@@ -16,6 +16,13 @@ $.ajax({
         let voucherText2 = document.createElement('p');
         voucherText2.textContent = 'Voucher Code: ' + item.Code; + '. Valid till:' + item.Valid;
         let Click = 'Click To Redeem!';
+      
+        //Code to alternate the background colouring of the vouchers:
+        if(index % 2){
+          newVoucher.style.backgroundColor = 'lightgrey';
+        } else {
+          newVoucher.style.backgroundColor = 'white';
+        }
 
         //Appends the information above to our new voucher and adds to voucher container:
         newVoucher.append(voucherText);
